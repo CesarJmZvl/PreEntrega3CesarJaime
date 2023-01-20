@@ -24,3 +24,38 @@ else if (avg < 90) {
 else if (avg < 100) {
     console.log("Nota : Excelente"); 
 }
+
+class Alumnos{
+    constructor(nombre, calif, grado){
+        this.nombre = nombre;
+        this.calif = calif;
+        this.grado = grado;
+    }
+}
+
+const alumnos = []
+
+alumnos.push (new Alumnos("Alexa", 98, 1))
+alumnos.push (new Alumnos("Daniela", 100, 1))
+alumnos.push (new Alumnos("Alfredo", 95, 2))
+alumnos.push (new Alumnos("Mariana", 88, 1))
+alumnos.push (new Alumnos("Camila", 92, 1))
+
+console.log (alumnos)
+
+let nuevoAlumno = 0
+while (nuevoAlumno < 2) {
+    let pregunta = new Alumnos(prompt("Ingresa nombre del alumno"),
+                    Number(prompt("Ingresa la calificacion del alumno")),
+                    Number(prompt("Ingresa el grado del alumno")))
+                    alumnos.push (pregunta)
+    nuevoAlumno++
+}
+
+console.log(alumnos)
+
+function filtrarCalif(calif){
+    return alumnos.filter(propiedad => propiedad.calif >= Number(calif))
+}
+
+console.log(filtrarCalif(90))
