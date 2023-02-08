@@ -6,11 +6,7 @@ const calculate = () => {
     let history = document.querySelector("#hist").value;
     let grades = "";
     
-    let totalgrades =
-        parseFloat(espaniol) +
-        parseFloat(mate) +
-        parseFloat(eng) +
-        parseFloat(history);
+    let totalgrades = parseFloat(espaniol) + parseFloat(mate) + parseFloat(eng) + parseFloat(history);
     
     let percentage = (totalgrades / 400) * 100;
     if (percentage <= 100 && percentage >= 90) {
@@ -31,11 +27,10 @@ const calculate = () => {
     } 
     else {    
         if (percentage >= 59.9) {
-        document.querySelector("#showdata").innerHTML = `El porcentaje obtenido es de ${percentage}%. Tu nota es ${grades}. Tu estatus es APROBADO.`;
+            document.querySelector("#showdata").innerHTML = `El porcentaje obtenido es de ${percentage}%. Tu nota es ${grades}. Tu estatus es APROBADO.`;
         } 
         else {
-        document.querySelector("#showdata").innerHTML = `El porcentaje obtenido es de ${percentage}%.
-        Tu nota es ${grades}. Tu estatus es REPROBADO.`;
+            document.querySelector("#showdata").innerHTML = `El porcentaje obtenido es de ${percentage}%. Tu nota es ${grades}. Tu estatus es REPROBADO.`;
         }
     }
 }  
