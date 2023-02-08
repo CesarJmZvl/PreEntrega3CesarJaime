@@ -1,61 +1,41 @@
-var estudiantes = [['Alexa', 98], ['Daniela', 100], ['Alfredo', 95], ['Mariana', 88], ['Camila', 92]];
-var califProm = 0;
+const calculate = () => {
 
-for (var i=0; i < estudiantes.length; i++) {
-    califProm += estudiantes[i][1];
-    var avg = (califProm/estudiantes.length);
-}
-
-console.log("Calificación promedio: " + (califProm)/estudiantes.length);
-alert("Calificación promedio: " + (califProm)/estudiantes.length)
-
-if (avg < 60) {
-    console.log("Nota : Deficiente");      
-} 
-else if (avg < 70) {
-    console.log("Nota : Necesita mejorar"); 
-} 
-else if (avg < 80) {
-    console.log("Nota : Regular"); 
-}
-else if (avg < 90) {
-    console.log("Nota : Bueno"); 
-}
-else if (avg < 100) {
-    console.log("Nota : Excelente"); 
-}
-
-class Alumnos{
-    constructor(nombre, calif, grado){
-        this.nombre = nombre;
-        this.calif = calif;
-        this.grado = grado;
+    let espaniol = document.querySelector("#spanish").value;
+    let mate = document.querySelector("#math").value;
+    let eng = document.querySelector("#english").value;
+    let history = document.querySelector("#hist").value;
+    let grades = "";
+    
+    let totalgrades =
+        parseFloat(espaniol) +
+        parseFloat(mate) +
+        parseFloat(eng) +
+        parseFloat(history);
+    
+    let percentage = (totalgrades / 400) * 100;
+    if (percentage <= 100 && percentage >= 90) {
+        grades = "MUY BUEN DESEMPEÑO";
+    } 
+    else if (percentage <= 89 && percentage >= 80) {
+        grades = "BUEN DESEMPEÑO";
+    } 
+    else if (percentage <= 79 && percentage >= 60) {
+        grades = "REGULAR";
+    } 
+    else {
+        grades = "DEFICIENTE";
     }
-}
-
-const alumnos = []
-
-alumnos.push (new Alumnos("Alexa", 98, 1))
-alumnos.push (new Alumnos("Daniela", 100, 1))
-alumnos.push (new Alumnos("Alfredo", 95, 2))
-alumnos.push (new Alumnos("Mariana", 88, 1))
-alumnos.push (new Alumnos("Camila", 92, 1))
-
-console.log (alumnos)
-
-let nuevoAlumno = 0
-while (nuevoAlumno < 2) {
-    let pregunta = new Alumnos(prompt("Ingresa nombre del alumno"),
-                    Number(prompt("Ingresa la calificacion del alumno")),
-                    Number(prompt("Ingresa el grado del alumno")))
-                    alumnos.push (pregunta)
-    nuevoAlumno++
-}
-
-console.log(alumnos)
-
-function filtrarCalif(calif){
-    return alumnos.filter(propiedad => propiedad.calif >= Number(calif))
-}
-
-console.log(filtrarCalif(90))
+    
+    if (espaniol == "" || mate == "" || eng == "" || history == "") {
+        document.querySelector("#showdata").innerHTML = "Favor de llenar todos los campos";
+    } 
+    else {    
+        if (percentage >= 59.9) {
+        document.querySelector("#showdata").innerHTML = `El porcentaje obtenido es de ${percentage}%. Tu nota es ${grades}. Tu estatus es APROBADO.`;
+        } 
+        else {
+        document.querySelector("#showdata").innerHTML = `El porcentaje obtenido es de ${percentage}%.
+        Tu nota es ${grades}. Tu estatus es REPROBADO.`;
+        }
+    }
+}  

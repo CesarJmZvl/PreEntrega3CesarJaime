@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: white;
+    font-size: 12px;
+    text-align: center;
+}
+
+.container {
+    flex: 0 1 700px;
+    margin: auto;
+    padding: 10px;
+}
+
+.screen-body-item {
+    flex: 1;
+    padding: auto;
+}
+
+input {
+    margin: 10px 10px 10px;
+}
+
+.showdata {
+    color: black;
+    font-size: 1.2rem;
+    padding-top: 10px 10px;
+}
