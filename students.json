@@ -1,0 +1,16 @@
+[    
+    {        
+        "name": "Alice",        
+        "spanish": 90,        
+        "math": 80,        
+        "english": 70,        
+        "history": 85    
+        },    
+    {
+        "name": "Bob",        
+        "spanish": 85,        
+        "math": 75,        
+        "english": 80,        
+        "history": 90    
+    }
+]

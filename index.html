@@ -6,35 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="styles.css">
     <title>Calculadora de notas</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Calculadora de notas del alumno</h1>
-    <div class="screen-body-item">
-        <div class="app">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Español" id="spanish">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Matemáticas" id="math">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Inglés" id="english">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Historia" id="hist">
-            </div>
-            <div>
-                <input type="button" value="Calcular" class="form-button" onclick="calculate()">
-            </div>
-        </div>
-    </div>
-    <div class="form-group showdata">
-        <p id="showdata"></p>
-    </div>
-    </div>
+    <h1>Calcular promedio de calificaciones</h1>
+    <form>
+        <label for="spanish">Español:</label>
+        <input type="number" id="spanish" name="spanish" placeholder="Introduzca la calificación"><br>
+        <label for="math">Matemáticas:</label>
+        <input type="number" id="math" name="math" placeholder="Introduzca la calificación"><br>
+        <label for="english">Inglés:</label>
+        <input type="number" id="english" name="english" placeholder="Introduzca la calificación"><br>
+        <label for="hist">Historia:</label>
+        <input type="number" id="hist" name="hist" placeholder="Introduzca la calificación"><br>
+        <button type="button" onclick="calculate()">Calcular</button>
+    </form>
+    <div id="showdata"></div>
     <script src="main.js"></script>
 </body>
 </html>

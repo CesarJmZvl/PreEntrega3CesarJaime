@@ -5,29 +5,34 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-body {
-    background: white;
-    font-size: 12px;
+h1 {
+    text-align: center;
+    margin: 15px;
+}
+
+form {
+    width: 50%;
+    margin: 50px auto;
     text-align: center;
 }
 
-.container {
-    flex: 0 1 700px;
-    margin: auto;
-    padding: 10px;
-}
-
-.screen-body-item {
-    flex: 1;
-    padding: auto;
+label {
+    display: inline-block;
+    width: 100px;
+    margin: 10px;
 }
 
 input {
-    margin: 10px 10px 10px;
+    width: auto;
+    margin: 0px 20px;
 }
 
-.showdata {
-    color: black;
-    font-size: 1.2rem;
-    padding-top: 10px 10px;
+button {
+    margin-top: 10px;
+}
+
+#showdata {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
 }
