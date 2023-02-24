@@ -12,17 +12,19 @@
 </head>
 <body>
     <h1>Calcular promedio de calificaciones</h1>
-    <form>
-        <label for="spanish">Español:</label>
-        <input type="number" id="spanish" name="spanish" placeholder="Introduzca la calificación"><br>
-        <label for="math">Matemáticas:</label>
-        <input type="number" id="math" name="math" placeholder="Introduzca la calificación"><br>
-        <label for="english">Inglés:</label>
-        <input type="number" id="english" name="english" placeholder="Introduzca la calificación"><br>
-        <label for="hist">Historia:</label>
-        <input type="number" id="hist" name="hist" placeholder="Introduzca la calificación"><br>
-        <button type="button" onclick="calculate()">Calcular</button>
-    </form>
+    <div>
+        <form>
+            <label for="spanish">Español:</label>
+            <input type="number" id="spanish" name="spanish" placeholder="Introduzca la calificación"><br>
+            <label for="math">Matemáticas:</label>
+            <input type="number" id="math" name="math" placeholder="Introduzca la calificación"><br>
+            <label for="english">Inglés:</label>
+            <input type="number" id="english" name="english" placeholder="Introduzca la calificación"><br>
+            <label for="hist">Historia:</label>
+            <input type="number" id="hist" name="hist" placeholder="Introduzca la calificación"><br>
+            <button type="button" onclick="calculate()">Calcular</button>
+        </form>
+    </div>
     <div id="showdata"></div>
     <script src="main.js"></script>
 </body>
